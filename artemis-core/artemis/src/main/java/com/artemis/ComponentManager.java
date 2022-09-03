@@ -58,6 +58,10 @@ public class ComponentManager extends BaseSystem {
 		return mappers.get(type.getIndex());
 	}
 
+	protected <T extends Component> ComponentMapper<T> getMapper(int typeIndex) {
+		return mappers.get(typeIndex);
+	}
+
 	void registerComponentType(ComponentType ct, int capacity) {
 		int index = ct.getIndex();
 		ComponentMapper mapper = new ComponentMapper(ct.getType(), world);
