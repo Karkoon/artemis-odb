@@ -411,6 +411,14 @@ public class World {
 	}
 
 	/**
+	 * Retrieves a ComponentMapper instance for fast retrieval of components
+	 * from entities.
+	 */
+	public <T extends Component> ComponentMapper<T> getMapper(int componentIndex) {
+		return cm.getMapper(componentIndex);
+	}
+
+	/**
 	 * @return Injector responsible for dependency injection.
 	 */
 	public Injector getInjector() {
